@@ -37,6 +37,9 @@ Cybersecurity labs using Docker, organized by varying levels of difficulty:
    - **Setup**: Use Docker to create a safe, isolated lab environment where you can run and analyze malware samples.
    - **Tasks**: Automate the collection of malware analysis data like network traffic, changed files, and system calls.
 
+7. **Blockchain Lab**:
+   - **Objective**: Evaluate and Attack a vulnerable smart contract.
+
 ### Expert
 7. **Advanced Persistent Threat (APT) Simulation**:
    - **Objective**: Simulate an APT to understand stealth techniques and long-term impact.

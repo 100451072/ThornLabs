@@ -2,20 +2,50 @@
 
 In this lab we will be simulating a simple Network with known vulnerabilities to learn the basic principles of the Metasploit framework.
 
-#### Objective:
+## Objective:
 Learn the basics of the Metasploit Framework, including how to use it for scanning, exploiting vulnerabilities, and post-exploitation activities.
 
-#### Setup:
-1. **Metasploit Container**: Set up a Docker container with Metasploit installed. This will be your attack machine.
-2. **Vulnerable Targets**: Deploy one or more Docker containers running vulnerable services or applications. You could use containers with vulnerable versions of software like an FTP server, a web application, or an operating system image.
+## Lab-1
+   - In this first lab we will be deploying a docker container with a vulnerable version of Apache:
+      - Appache 2.4.49/2.4.50 ([Exploit DB](https://www.exploit-db.com/exploits/50512))
 
-#### Tasks:
+## Lab-2 
+      - SSH
+
+## Lab-3
+      - FTP
+
+## Building and Running the Dockerfile
+
+   1. Build the Docker image with the following command:
+
+      ```
+      sudo docker build -t vulnerable_services .
+      ```
+      
+   2. Run the container with:
+
+      ```
+      sudo docker run -d -p 80:80 --name my_vulnerable_container vulnerable_services
+      ```
+
+      This setup provides a basic environment for practicing exploitation techniques. Remember to customize configurations and software versions based on specific vulnerabilities you wish to explore.
+
+   3. Optional: Check the Container's Logs
+
+      If you want to see what's happening inside the container, such as checking if Apache started correctly, you can use the following command to view the container's logs:
+
+      docker logs my_vulnerable_apache
+
+      This command will show you the output from the container, including any startup messages from Apache.
+
+## Tasks:
 1. **Environment Familiarization**:
    - Understand the Metasploit interface.
    - Learn how to update Metasploit and load modules.
 
 2. **Host Discovery**:
-   - Use Metasploit's `db_nmap` module to perform network scanning and automatically store the output in Metasploit's database.
+   - Use Nmap to scan the network.
 
 3. **Vulnerability Scanning**:
    - Utilize Metasploit's scanning modules to identify vulnerabilities in the target containers.
